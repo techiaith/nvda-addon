@@ -1,0 +1,29 @@
+{
+	"addonId": "uti_cy",
+	"displayName": "Uned Technolegau Iaith Cymraeg",
+	"URL": "",
+	"description": "Welsh language tts addon",
+	"sha256": "35ccb8cc8f3cd1c6388ebb64548a0f190d2b692677624f3a8253b37542c59ae9",
+	"homepage": "https://api.techiaith.org",
+	"addonVersionName": "0.1",
+	"addonVersionNumber": {
+		"major": 0,
+		"minor": 1,
+		"patch": 0
+	},
+	"minNVDAVersion": {
+		"major": 0,
+		"minor": 0,
+		"patch": 0
+	},
+	"lastTestedVersion": {
+		"major": 0,
+		"minor": 0,
+		"patch": 0
+	},
+	"channel": "stable",
+	"publisher": "",
+	"sourceURL": null,
+	"license": null,
+	"licenseURL": null
+}
