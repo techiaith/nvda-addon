@@ -1,0 +1,410 @@
+# Welsh (Cymraeg) translation for techiaith_tts
+# Copyright (C) 2024-2025 Uned Technolegau Iaith / Language Technologies Unit
+# This file is distributed under the same license as the techiaith_tts package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: techiaith_tts 2025.11.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2025-11-05 12:27+0000\n"
+"PO-Revision-Date: 2025-11-05 12:30+0000\n"
+"Last-Translator: Uned Technolegau Iaith <techiaith@bangor.ac.uk>\n"
+"Language-Team: Welsh\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:60
+msgid ""
+"Welsh Neural Voices - First Time Setup\n"
+"\n"
+"This addon requires Welsh voice data to function.\n"
+"\n"
+"Download details:\n"
+"• Size: Approximately 77 MB\n"
+"• Voice: Welsh multi-speaker neural voice (medium quality, 3 speakers)\n"
+"• Internet connection required\n"
+"\n"
+"NVDA will restart automatically after the download completes.\n"
+"\n"
+"Would you like to download the Welsh voices now?"
+msgstr ""
+"Lleisiau Niwral Cymraeg - Gosodiad Tro Cyntaf\n"
+"\n"
+"Mae'r ychwanegyn hwn angen data llais Cymraeg i weithio.\n"
+"\n"
+"Manylion lawrlwytho:\n"
+"• Maint: Tua 77 MB\n"
+"• Llais: Llais niwral aml-siaradwr Cymraeg (ansawdd canolig, 3 siaradwr)\n"
+"• Mae angen cysylltiad rhyngrwyd\n"
+"\n"
+"Bydd NVDA yn ailgychwyn yn awtomatig ar ôl i'r lawrlwythiad gwblhau.\n"
+"\n"
+"Hoffech chi lawrlwytho'r lleisiau Cymraeg nawr?"
+
+#. Translators: title of download confirmation dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:73
+msgid "Download Welsh Voices?"
+msgstr "Lawrlwytho Lleisiau Cymraeg?"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:83
+msgid ""
+"You can download Welsh voices later from:\n"
+"NVDA Menu → Preferences → Settings → Speech → Select 'Uned Technolegau Iaith "
+"- Welsh Neural Voices' as your synthesizer.\n"
+"\n"
+"The addon will not function until voices are downloaded."
+msgstr ""
+"Gallwch lawrlwytho lleisiau Cymraeg yn ddiweddarach o:\n"
+"Dewislen NVDA → Dewisiadau → Gosodiadau → Lleferydd → Dewiswch 'Uned Technolegau Iaith "
+"- Welsh Neural Voices' fel eich syntheseiddydd.\n"
+"\n"
+"Ni fydd yr ychwanegyn yn gweithio nes bod lleisiau wedi'u lawrlwytho."
+
+#. Translators: title of information dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:91
+msgid "Welsh Voices Not Downloaded"
+msgstr "Lleisiau Cymraeg Heb Eu Lawrlwytho"
+
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:108
+msgid ""
+"No Welsh voices are available for download.\n"
+"Please check your internet connection and try again."
+msgstr ""
+"Dim lleisiau Cymraeg ar gael i'w lawrlwytho.\n"
+"Gwiriwch eich cysylltiad rhyngrwyd a rhowch gynnig arall arni."
+
+#. Translators: error title
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:112
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:140
+msgid "Error Downloading Welsh Voices"
+msgstr "Gwall wrth Lawrlwytho Lleisiau Cymraeg"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/__init__.py:135
+#, python-brace-format
+msgid ""
+"Failed to download Welsh voices automatically.\n"
+"Error: {error}\n"
+"Please check NVDA's log for more details."
+msgstr ""
+"Methu lawrlwytho lleisiau Cymraeg yn awtomatig.\n"
+"Gwall: {error}\n"
+"Gwiriwch log NVDA am fwy o fanylion."
+
+#. Translators: the label of the OK button in a dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/components.py:86
+msgid "OK"
+msgstr "Iawn"
+
+#. Translators: the label of the cancel button in a dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/components.py:89
+msgid "Cancel"
+msgstr "Canslo"
+
+#. Translators: message of a progress dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:122
+#, python-brace-format
+msgid "Downloaded: {progress}%"
+msgstr "Wedi lawrlwytho: {progress}%"
+
+#. Translators: message shown in the voice download progress dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:131
+msgid "Installing voice"
+msgstr "Yn gosod llais"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:164
+#, python-brace-format
+msgid ""
+"Cannot download voice {voice}.\n"
+"Please check your connection and try again."
+msgstr ""
+"Methu lawrlwytho llais {voice}.\n"
+"Gwiriwch eich cysylltiad a rhowch gynnig arall arni."
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:167
+msgid "Download failed"
+msgstr "Methwyd lawrlwytho"
+
+#. Translators: message shown when voice download completes successfully
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:179
+msgid ""
+"Welsh voices have been downloaded successfully!\n"
+"\n"
+"NVDA needs to restart to load the new voices.\n"
+"\n"
+"Click OK to restart NVDA now."
+msgstr ""
+"Mae lleisiau Cymraeg wedi'u lawrlwytho'n llwyddiannus!\n"
+"\n"
+"Mae angen i NVDA ailgychwyn i lwytho'r lleisiau newydd.\n"
+"\n"
+"Cliciwch Iawn i ailgychwyn NVDA nawr."
+
+#. Translators: title of download completion dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:184
+msgid "Download Complete"
+msgstr "Lawrlwythiad Wedi'i Gwblhau"
+
+#. Translators: title of a progress dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:193
+#, python-brace-format
+msgid "Downloading voice {voice}"
+msgstr "Yn lawrlwytho llais {voice}"
+
+#. Translators: message of a progress dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:197
+msgid "Retrieving download information..."
+msgstr "Yn cyrchu gwybodaeth lawrlwytho..."
+
+#. Translators: message shown in progress dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_download.py:210
+#, python-brace-format
+msgid "Downloading file: {file}"
+msgstr "Yn lawrlwytho ffeil: {file}"
+
+#. Add controls
+#. Translators: label for a list of installed voices
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:42
+msgid "Installed voices"
+msgstr "Lleisiau wedi'u gosod"
+
+#. Translators: list view column title
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:48
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:243
+msgid "Name"
+msgstr "Enw"
+
+#. Translators: list view column title
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:51
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:245
+msgid "Quality"
+msgstr "Ansawdd"
+
+#. Translators: list view column title
+#. Build controls
+#. Translators: label of a choice
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:54
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:238
+msgid "Language"
+msgstr "Iaith"
+
+#. Translators: label for a button for showing voice model card
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:60
+msgid "&Voice model card..."
+msgstr "&Cerdyn model llais..."
+
+#. Translators: label for a button for removing a voice
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:62
+msgid "&Remove voice..."
+msgstr "&Dileu llais..."
+
+#. Translators: the main label of the install button
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:67
+msgid "Install from local file"
+msgstr "Gosod o ffeil leol"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:70
+msgid ""
+"Install a voice from a local archive.\n"
+"The archive contains the voice model and configuration.\n"
+"The archive should have a (.tar.gz) file extension."
+msgstr ""
+"Gosod llais o archif leol.\n"
+"Mae'r archif yn cynnwys model llais a chyfluniad.\n"
+"Dylai'r archif fod ag estyniad ffeil (.tar.gz)."
+
+#. ! Intentionally untranslatable
+#. Translators: title of a message box showing voice model card
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:121
+msgid "Model card"
+msgstr "Cerdyn model"
+
+#. Translators: content of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:127
+msgid "Model card information is unavailable for this voice"
+msgstr "Nid yw gwybodaeth cerdyn model ar gael ar gyfer y llais hwn"
+
+#. Translators: title of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:129
+msgid "Not found"
+msgstr "Heb ei ganfod"
+
+#. Translators: message in a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:146
+msgid "You cannot remove the currently active voice!"
+msgstr "Ni allwch ddileu'r llais sy'n weithredol ar hyn o bryd!"
+
+#. Translators: title of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:148
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:301
+msgid "Error"
+msgstr "Gwall"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:155
+#, python-brace-format
+msgid ""
+"Do you want to remove this voice?\n"
+"Voice: {name}"
+msgstr ""
+"Ydych chi eisiau dileu'r llais hwn?\n"
+"Llais: {name}"
+
+#. Translators: title of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:159
+msgid "Remove voice?"
+msgstr "Dileu llais?"
+
+#. Translators: message in a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:169
+msgid ""
+"Failed to remove voice.\n"
+"See NVDA's log for more details."
+msgstr ""
+"Methwyd dileu'r llais.\n"
+"Gweler log NVDA am fwy o fanylion."
+
+#. Translators: title of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:171
+msgid "Failed"
+msgstr "Methwyd"
+
+#. Translators: message in a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:177
+msgid "Voice removed successfully."
+msgstr "Llais wedi'i ddileu'n llwyddiannus."
+
+#. Translators: title of a message box
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:179
+msgid "Done"
+msgstr "Wedi gorffen"
+
+#. Translators: title for a dialog for opening a file
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:188
+msgid "Choose voice archive file "
+msgstr "Dewiswch ffeil archif llais "
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:213
+msgid "Failed to install voice from archive. See NVDA's log for more details."
+msgstr "Methwyd gosod llais o'r archif. Gweler log NVDA am fwy o fanylion."
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:215
+msgid "Voice installation failed"
+msgstr "Methwyd gosod y llais"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:222
+#, python-brace-format
+msgid "Voice {voice} has been installed successfully."
+msgstr "Mae llais {voice} wedi'i osod yn llwyddiannus."
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:224
+msgid "Voice installed successfully"
+msgstr "Llais wedi'i osod yn llwyddiannus"
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:240
+msgid "Available voices"
+msgstr "Lleisiau sydd ar gael"
+
+#. Translators: header of a group of controls for previewing the voice
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:256
+msgid "Preview"
+msgstr "Rhagolwg"
+
+#. Translators: Label for a setting in synth settings ring.
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:258
+#: addon/synthDrivers/techiaith_tts/__init__.py:127
+msgid "Speaker"
+msgstr "Siaradwr"
+
+#. Translators: label of a button
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:261
+msgid "&Preview"
+msgstr "&Rhagolwg"
+
+#. Translators: label of a button to download the standard variant of the voice
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:265
+msgid "&Download standard variant"
+msgstr "&Lawrlwytho amrywiad safonol"
+
+#. Translators: label of a button to download the fast variant of voice
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:267
+msgid "Download &fast variant"
+msgstr "Lawrlwytho amrywiad &cyflym"
+
+#. Translators: label of a button to refresh the voices list
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:269
+msgid "&Refresh voices list"
+msgstr "&Adnewyddu rhestr lleisiau"
+
+#. Translators: message in a dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:289
+msgid "Retrieving voices list. Please wait..."
+msgstr "Yn cyrchu rhestr lleisiau. Arhoswch..."
+
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:300
+msgid ""
+"Could not retrieve voice list.\n"
+"Please check your connection and try again."
+msgstr ""
+"Methu cyrchu rhestr lleisiau.\n"
+"Gwiriwch eich cysylltiad a rhowch gynnig arall arni."
+
+#. Translators: message in a dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:352
+msgid "Playing preview..."
+msgstr "Yn chwarae rhagolwg..."
+
+#. Translators: title of voice manager dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:411
+msgid "Techiaith TTS voice manager"
+msgstr "Rheolwr lleisiau TTS Techiaith"
+
+#. Translators: label of a tab in a tab control
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:422
+msgid "Installed"
+msgstr "Wedi gosod"
+
+#. Translators: label of a tab in a tab control
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:427
+msgid "Download"
+msgstr "Lawrlwytho"
+
+#. Translators: the label of the close button in a dialog
+#: addon/globalPlugins/techiaith_tts_global_plugin/voice_manager.py:443
+msgid "&Close"
+msgstr "&Cau"
+
+#. Translators: Label for a setting in voice settings dialog.
+#: addon/synthDrivers/techiaith_tts/__init__.py:124
+msgid "&Speaker"
+msgstr "&Siaradwr"
+
+#: addon/synthDrivers/techiaith_tts/__init__.py:168
+msgid "&Noise scale"
+msgstr "Graddfa &sŵn"
+
+#: addon/synthDrivers/techiaith_tts/__init__.py:169
+msgid "&Length scale"
+msgstr "Graddfa &hyd"
+
+#: addon/synthDrivers/techiaith_tts/__init__.py:170
+msgid "Noise &w"
+msgstr "Sŵn &w"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Uned Technolegau Iaith - Welsh Neural Voices"
+msgstr "Uned Technolegau Iaith - Lleisiau Niwral Cymraeg"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid ""
+"Automatic Welsh (Cymraeg) neural text-to-speech for NVDA using Piper models. "
+"All Welsh voices are downloaded automatically on first run."
+msgstr ""
+"Trosi testun-i-lafar niwral Cymraeg awtomatig ar gyfer NVDA gan ddefnyddio modelau Piper. "
+"Mae pob llais Cymraeg yn cael ei lawrlwytho'n awtomatig ar y tro cyntaf."

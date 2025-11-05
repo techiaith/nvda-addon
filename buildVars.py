@@ -16,47 +16,42 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name": "uti_cy",
+	"addon_name": "techiaith_tts",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
-	"addon_summary": _("Uned Technolegau Iaith Cymraeg"),
+	"addon_summary": _("Uned Technolegau Iaith - Welsh Neural Voices"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""Welsh language tts addon"""),
+	"addon_description": _("""Automatic Welsh (Cymraeg) neural text-to-speech for NVDA using Piper models. All Welsh voices are downloaded automatically on first run."""),
 	# version
-	"addon_version": "0.1",
+	"addon_version": "2025.11.0",
 	# Author(s)
-	"addon_author": "Uned Technolegau Iaith <techiaith@bangor.ac.uk>",
+	"addon_author": "Stephen Russell <str20tbl@bangor.ac.uk>",
 	# URL for the add-on documentation support
-	"addon_url": "https://api.techiaith.org",
+	"addon_url": "https://techiaith.cymru/cynnyrch/nvda/",
 	# URL for the add-on repository where the source code can be found
-	"addon_sourceURL": None,
+	"addon_sourceURL": "https://github.com/techiaith/nvda-addon",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
-	"addon_minimumNVDAVersion": 2022.1,
+	"addon_minimumNVDAVersion": 2025.1,
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": 2022.4,
+	"addon_lastTestedNVDAVersion": 2025.3,
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
-	"addon_updateChannel": None,
+	"addon_updateChannel": "beta",
 	# Add-on license such as GPL 2
-	"addon_license": None,
+	"addon_license": "GPL 2",
 	# URL for the license document the ad-on is licensed under
 	"addon_licenseURL": None,
 }
 
-# Define the python files that are the sources of your add-on.
-# You can either list every file (using ""/") as a path separator,
-# or use glob expressions.
-# For example to include all files with a ".py" extension from the "globalPlugins" dir of your add-on
-# the list can be written as follows:
-# pythonSources = ["addon/globalPlugins/*.py"]
-# For more information on SCons Glob expressions please take a look at:
-# https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = ["addon/globalPlugins/*.py"]
+pythonSources = [
+    "addon/globalPlugins/*/*.py",
+    "addon/synthDrivers/*/*.*"
+]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
