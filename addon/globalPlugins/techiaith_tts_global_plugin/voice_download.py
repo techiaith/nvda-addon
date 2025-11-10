@@ -286,11 +286,11 @@ def get_available_voices():
             "name_english": "Welsh",
         },
         "files": {
-            "ms_cy_en.onnx": {
+            "cy_GB-bu_tts.onnx": {
                 "size_bytes": 77061326,
                 "md5_digest": "aee1f60f7329b1e67047ad18446e646d"
             },
-            "ms_cy_en.onnx.json": {
+            "cy_GB-bu_tts.onnx.json": {
                 "size_bytes": 7182,
                 "md5_digest": "da34be5e46d815dea63eafecaa426dc6"
             }
