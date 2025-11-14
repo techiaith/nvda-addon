@@ -44,15 +44,56 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     def _perform_voice_check(self):
         """Check for Welsh voices and prompt user to download if none are installed."""
         if self.__auto_download_attempted:
+            log.debug("Voice check: Auto-download already attempted, skipping.")
             return
 
         installed_voices = list(TechiaithTextToSpeechSystem.load_piper_voices_from_nvda_config_dir())
 
+        log.info(f"Voice check: Found {len(installed_voices)} installed voices.")
+
+        # Check if the correct voice files exist (not just old files)
+        should_prompt_download = False
+
         if not installed_voices:
+            should_prompt_download = True
+            log.info("Voice check: No voice directories found.")
+        else:
+            log.info(f"Voice check: Installed voice keys: {[v.key for v in installed_voices]}")
+            # Check if voice files actually exist with correct names
+            voices_dir = TECHIAITH_VOICES_DIR
+            log.info(f"Voice check: Voices directory: {voices_dir}")
+            log.info(f"Voice check: Directory exists: {os.path.exists(voices_dir)}")
+
+            # Verify that the expected voice files exist with correct names
+            expected_voice_dir = os.path.join(voices_dir, "cy-ms-medium")
+            expected_onnx_file = os.path.join(expected_voice_dir, "cy_en_GB-bu_tts.onnx")
+            expected_json_file = os.path.join(expected_voice_dir, "cy_en_GB-bu_tts.onnx.json")
+
+            if os.path.exists(expected_voice_dir):
+                log.info(f"Voice check: Expected voice directory exists: {expected_voice_dir}")
+                files_in_dir = os.listdir(expected_voice_dir) if os.path.isdir(expected_voice_dir) else []
+                log.info(f"Voice check: Files in directory: {files_in_dir}")
+
+                onnx_exists = os.path.exists(expected_onnx_file)
+                json_exists = os.path.exists(expected_json_file)
+
+                log.info(f"Voice check: Expected ONNX file exists ({expected_onnx_file}): {onnx_exists}")
+                log.info(f"Voice check: Expected JSON file exists ({expected_json_file}): {json_exists}")
+
+                if not (onnx_exists and json_exists):
+                    log.warning("Voice check: Expected voice files not found with correct names. May have old files.")
+                    should_prompt_download = True
+            else:
+                log.info(f"Voice check: Expected voice directory does not exist: {expected_voice_dir}")
+                should_prompt_download = True
+
+        if should_prompt_download:
             self.__auto_download_attempted = True
-            log.info("No Welsh voices found. Prompting user to download Welsh voices.")
+            log.info("Voice check: Prompting user to download Welsh voices.")
             # Ask user before downloading
             wx.CallLater(500, self._prompt_voice_download)
+        else:
+            log.info("Voice check: Valid voices found, skipping auto-download prompt.")
 
     def _prompt_voice_download(self):
         """Show a dialog asking user if they want to download Welsh voices."""

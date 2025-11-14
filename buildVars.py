@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Automatic Welsh (Cymraeg) neural text-to-speech for NVDA using Piper models. All Welsh voices are downloaded automatically on first run."""),
 	# version
-	"addon_version": "2025.11.0",
+	"addon_version": "2025.11.2",
 	# Author(s)
 	"addon_author": "Stephen Russell <str20tbl@bangor.ac.uk>",
 	# URL for the add-on documentation support

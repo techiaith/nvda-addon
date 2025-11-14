@@ -28,7 +28,7 @@ with helpers.import_bundled_library():
     from pathlib import Path
 
 
-VOICE_DOWNLOAD_URL_PREFIX = "https://huggingface.co/techiaith/cy_GB-bu_tts/resolve/main"
+VOICE_DOWNLOAD_URL_PREFIX = "https://huggingface.co/techiaith/cy_en_GB-bu_tts/resolve/main"
 THREAD_POOL_EXECUTOR = ThreadPoolExecutor()
 
 
@@ -286,11 +286,11 @@ def get_available_voices():
             "name_english": "Welsh",
         },
         "files": {
-            "cy_GB-bu_tts.onnx": {
+            "cy_en_GB-bu_tts.onnx": {
                 "size_bytes": 77061326,
                 "md5_digest": "aee1f60f7329b1e67047ad18446e646d"
             },
-            "cy_GB-bu_tts.onnx.json": {
+            "cy_en_GB-bu_tts.onnx.json": {
                 "size_bytes": 7182,
                 "md5_digest": "da34be5e46d815dea63eafecaa426dc6"
             }
