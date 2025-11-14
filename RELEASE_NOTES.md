@@ -82,5 +82,5 @@ Welsh-only neural text-to-speech for NVDA using Piper models. This addon provide
 ## SHA256 Checksum
 
 ```
-(Will be generated during build)
+7202359d1f3861b450e630b0092f7958385dc88b9ccea52b007a9102416043d0
 ```
