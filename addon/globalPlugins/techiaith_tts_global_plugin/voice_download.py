@@ -4,6 +4,7 @@
 # This file is covered by the GNU General Public License.
 
 
+import json
 import math
 import os
 import shutil
@@ -12,7 +13,7 @@ import typing
 from dataclasses import dataclass
 from enum import Enum
 from functools import partial
-from hashlib import md5
+from hashlib import sha256
 from urllib.parse import urlparse
 
 import wx
@@ -29,6 +30,7 @@ with helpers.import_bundled_library():
 
 
 VOICE_DOWNLOAD_URL_PREFIX = "https://huggingface.co/techiaith/cy_en_GB-bu_tts/resolve/main"
+HF_REPO_ID = "techiaith/cy_en_GB-bu_tts"
 THREAD_POOL_EXECUTOR = ThreadPoolExecutor()
 
 
@@ -46,7 +48,7 @@ class VoiceQualityLevel(Enum):
 class VoiceFile:
     file_path: str
     size_in_bytes: int
-    md5hash: str
+    file_hash: str
 
     def __post_init__(self):
         self.name = os.path.split(self.file_path)[-1]
@@ -86,10 +88,11 @@ class PiperVoice:
         for data in voice_data:
             file_list = []
             for (path, finfo) in data["files"].items():
+                file_hash = finfo.get("sha256_digest", "") or finfo.get("md5_digest", "")
                 file_list.append(VoiceFile(
                     file_path=path,
                     size_in_bytes=finfo["size_bytes"],
-                    md5hash=finfo["md5_digest"]
+                    file_hash=file_hash,
                 ))
             lang_info = data["language"]
             language = VoiceLanguage(
@@ -132,9 +135,9 @@ class PiperVoiceDownloader:
                 _("Installing voice")
             )
             hashes = {
-                file.md5hash: md5hash
-                for (file, __, md5hash) in result
-                if file.md5hash  # Only check hash if it's provided (not empty)
+                file.file_hash: computed_hash
+                for (file, __, computed_hash) in result
+                if file.file_hash  # Only check hash if it's provided (not empty)
             }
             if hashes and not all(k == v for (k, v) in hashes.items()):
                 has_error = True
@@ -217,7 +220,7 @@ class PiperVoiceDownloader:
     @classmethod
     def _do_download_file(cls, file, download_dir, progress_callback):
         target_file = os.path.join(download_dir, file.name)
-        hasher = md5()
+        hasher = sha256()
         total_size = file.size_in_bytes
         downloaded_til_now = 0
         with request.yield_response('GET', file.download_url) as response:
@@ -258,21 +261,61 @@ class PiperVoiceDownloader:
             done_callback(result)
 
 
-def get_available_voices():
+def _fetch_hf_file_metadata():
+    """Fetch file metadata (sizes and SHA256 hashes) from the HuggingFace API.
+
+    Returns a dict mapping filename -> {"size": int, "sha256": str},
+    or None on failure.
+    """
+    url = f"https://huggingface.co/api/models/{HF_REPO_ID}/tree/main"
+    try:
+        response = request.get(url, max_redirects=5, timeout=15)
+        response.raise_for_status()
+        entries = json.loads(response.body)
+        metadata = {}
+        for entry in entries:
+            if entry.get("type") != "file":
+                continue
+            path = entry.get("path", "")
+            size = entry.get("size", 0)
+            lfs = entry.get("lfs")
+            sha256_hash = lfs["oid"] if lfs else ""
+            metadata[path] = {"size": size, "sha256": sha256_hash}
+        return metadata
+    except Exception:
+        log.warning("Failed to fetch file metadata from HuggingFace API", exc_info=True)
+        return None
+
+
+def get_available_voices(force_online=False):
     """Get available Welsh voices for download.
 
-    Returns a hardcoded list containing the Welsh multi-speaker voice if it's not installed.
+    Fetches file metadata (sizes and SHA256 hashes) from the HuggingFace API.
+    Falls back to approximate sizes with no hash verification if the API is unreachable.
     """
     # Check if voice is already installed
     installed_voices = TechiaithTextToSpeechSystem.load_piper_voices_from_nvda_config_dir()
     installed_voice_keys = {voice.key for voice in installed_voices}
 
-    # Hardcoded Welsh voice details
     voice_key = "cy-ms-medium"
 
     # If already installed, return empty list
     if voice_key in installed_voice_keys:
         return []
+
+    # Fallback file info: approximate sizes for progress bar, empty hashes
+    voice_files = {
+        "cy_en_GB-bu_tts.onnx": {"size_bytes": 77061326, "sha256_digest": ""},
+        "cy_en_GB-bu_tts.onnx.json": {"size_bytes": 7182, "sha256_digest": ""},
+    }
+
+    # Try to fetch live metadata from HuggingFace API
+    hf_metadata = _fetch_hf_file_metadata()
+    if hf_metadata is not None:
+        for filename in voice_files:
+            if filename in hf_metadata:
+                voice_files[filename]["size_bytes"] = hf_metadata[filename]["size"]
+                voice_files[filename]["sha256_digest"] = hf_metadata[filename]["sha256"]
 
     # Create voice data structure
     voice_data = {
@@ -285,16 +328,7 @@ def get_available_voices():
             "name_native": "Cymraeg",
             "name_english": "Welsh",
         },
-        "files": {
-            "cy_en_GB-bu_tts.onnx": {
-                "size_bytes": 77061326,
-                "md5_digest": "aee1f60f7329b1e67047ad18446e646d"
-            },
-            "cy_en_GB-bu_tts.onnx.json": {
-                "size_bytes": 7182,
-                "md5_digest": "da34be5e46d815dea63eafecaa426dc6"
-            }
-        }
+        "files": voice_files,
     }
 
     # Convert to PiperVoice object
