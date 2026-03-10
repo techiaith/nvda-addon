@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Automatic Welsh (Cymraeg) neural text-to-speech for NVDA using Piper models. All Welsh voices are downloaded automatically on first run."""),
 	# version
-	"addon_version": "2026.3.0",
+	"addon_version": "2026.3.9",
 	# Author(s)
 	"addon_author": "Stephen Russell <str20tbl@bangor.ac.uk>",
 	# URL for the add-on documentation support
@@ -35,9 +35,9 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
-	"addon_minimumNVDAVersion": 2025.1,
+	"addon_minimumNVDAVersion": "2025.1.0",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": 2025.3,
+	"addon_lastTestedNVDAVersion": "2025.3.0",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
@@ -45,7 +45,7 @@ addon_info = {
 	# Add-on license such as GPL 2
 	"addon_license": "GPL 2",
 	# URL for the license document the ad-on is licensed under
-	"addon_licenseURL": None,
+	"addon_licenseURL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
 }
 
 pythonSources = [
@@ -71,3 +71,4 @@ baseLanguage = "en"
 # Extensions string must be of the form "markdown.extensions.extensionName"
 # e.g. "markdown.extensions.tables" to add tables.
 markdownExtensions = []
+

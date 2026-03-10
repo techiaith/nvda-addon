@@ -46,12 +46,12 @@ Uned Technolegau Iaith / Language Technologies Unit
 
 **Download URL:**
 ```
-https://github.com/techiaith/nvda-addon/releases/download/v2025.11.1/techiaith_tts-2025.11.1.nvda-addon
+https://github.com/techiaith/nvda-addon/releases/download/v2026.3.9/techiaith_tts-2026.3.9.nvda-addon
 ```
 
 **SHA256 Checksum:**
 ```
-4ed6dc65ae4f41045169b6b7fabf5d80e95d3f8cfc1b0734aac099812b1e6f8b
+9ad10273284da62d8316a6d2fbcbddf6d69a9ebb1d4fca94c3de4fcb48e408bd
 ```
 
 ---
@@ -60,7 +60,7 @@ https://github.com/techiaith/nvda-addon/releases/download/v2025.11.1/techiaith_t
 
 **Version:**
 ```
-2025.11.1
+2026.3.9
 ```
 
 **Channel:**
@@ -144,7 +144,7 @@ GPL 2
 
 ⚠️ **First Submission:** Your first submission requires manual approval from NV Access staff. Be patient!
 
-⚠️ **Immutable Versions:** Once published, you cannot change version 2025.11.1. Any fixes require a new version (e.g., 2025.11.2).
+⚠️ **Immutable Versions:** Once published, you cannot change version 2026.3.9. Any fixes require a new version (e.g., 2025.11.2).
 
 ⚠️ **Beta Channel:** Users must opt-in to see beta releases in the addon store.
 
@@ -177,7 +177,7 @@ GPL 2
 - Check URL is exactly correct
 
 **SHA256 mismatch:**
-- Recalculate: `sha256sum techiaith_tts-2025.11.1.nvda-addon`
+- Recalculate: `sha256sum techiaith_tts-2026.3.9.nvda-addon`
 - Ensure you're checking the file FROM the GitHub release
 
 **Invalid NVDA version:**

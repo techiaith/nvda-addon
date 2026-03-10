@@ -1,10 +1,23 @@
-# Welsh Neural Voices for NVDA - v2025.11.2 Beta
+# Welsh Neural Voices for NVDA - v2026.3.9 Beta
 
 > **⚠️ BETA SOFTWARE** - This is a beta release for testing. Please report issues on our [GitHub issues page](https://github.com/techiaith/nvda-addon/issues).
 
 ## About This Release
 
 Welsh-only neural text-to-speech for NVDA using Piper models. This addon provides high-quality Welsh (Cymraeg) voices for NVDA screen reader users.
+
+## What's New in v2026.3.9
+
+### Improvements
+- **Decoupled voice metadata from addon** — downloads now fetch file sizes and SHA256 hashes from HuggingFace API
+- **Switched hash verification from MD5 to SHA256** for improved security
+- **Graceful fallback when API is unreachable** — skips hash verification instead of failing
+- **Model files on HuggingFace can now be updated without redeploying the addon**
+
+### Build Metadata Fixes
+- Fixed NVDA version fields (were floats, now strings) — prevents JSON generation errors
+- Added license URL to addon metadata
+- Version bump to 2026.3.9
 
 ## What's New in v2025.11.2
 
@@ -40,7 +53,7 @@ Welsh-only neural text-to-speech for NVDA using Piper models. This addon provide
 
 ### Installation
 
-1. Download `techiaith_tts-2025.11.2.nvda-addon` from the assets below
+1. Download `techiaith_tts-2026.3.9.nvda-addon` from the assets below
 2. Open with NVDA (or use NVDA menu → Tools → Manage add-ons → Install)
 3. Restart NVDA when prompted
 4. A dialog will ask if you want to download Welsh voices (77 MB)
@@ -62,7 +75,7 @@ Welsh-only neural text-to-speech for NVDA using Piper models. This addon provide
 
 ## Technical Details
 
-- **Version:** 2025.11.2 (year.month.revision format)
+- **Version:** 2026.3.9 (year.month.day format)
 - **Author:** Stephen Russell, Uned Technolegau Iaith / Language Technologies Unit, Bangor University
 - **Based on:** [Sonata-NVDA](https://github.com/mush42/sonata-nvda) by Musharraf Omer
 - **License:** GPL v2
@@ -82,5 +95,5 @@ Welsh-only neural text-to-speech for NVDA using Piper models. This addon provide
 ## SHA256 Checksum
 
 ```
-7202359d1f3861b450e630b0092f7958385dc88b9ccea52b007a9102416043d0
+UPDATE_AFTER_BUILD
 ```
