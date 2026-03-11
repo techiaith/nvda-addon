@@ -1,6 +1,6 @@
 # Uned Technolegau Iaith - Welsh Neural Voices for NVDA
 
-> **⚠️ BETA SOFTWARE** - Version 2025.11.0
+> **⚠️ BETA SOFTWARE** - Version 2026.3.9
 > This is beta software currently in testing. Please report any issues on the [GitHub issues page](https://github.com/techiaith/nvda-addon/issues).
 
 **Welsh-only neural text-to-speech for NVDA. Only Welsh (Cymraeg) voices are supported.**
@@ -22,7 +22,7 @@ This add-on uses [Sonata: A cross-platform Rust engine for neural TTS models](ht
 
 ## What's Included
 
-- **Version:** 2025.11.0 Beta
+- **Version:** 2026.3.9 Beta
 - **Welsh Voice:** Multi-speaker neural voice (medium quality, 3 speakers)
 - **Language Support:** Welsh (Cymraeg) only
 - **Auto-download:** Voice is downloaded automatically on first run
@@ -113,7 +113,7 @@ We gratefully acknowledge:
 
 # License
 
-Copyright(c) 2024-2025, Stephen Russell, Uned Technolegau Iaith / Language Technologies Unit, Bangor University.
+Copyright(c) 2024-2026, Stephen Russell, Uned Technolegau Iaith / Language Technologies Unit, Bangor University.
 
 This software is licensed under The GNU GENERAL PUBLIC LICENSE Version 2 (GPL v2).
 
